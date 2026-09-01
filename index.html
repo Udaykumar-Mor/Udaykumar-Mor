@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Udaykumar Mor</title>
+<meta name="description" content="Portfolio of an AI/Machine Learning professional — projects, skills, and contact details.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #131417;
+    --paper-alt: #1b1c20;
+    --ink: #ece9e2;
+    --ink-soft: #9b9a94;
+    --rule: #2c2d31;
+    --accent: #c9a24b;
+    --accent-soft: #26241a;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  a { color: inherit; }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- Header ---------- */
+
+  header.site {
+    padding: 96px 0 72px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .kicker {
+    font-size: 15px;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+
+  h1.name {
+    font-size: clamp(40px, 6vw, 58px);
+    line-height: 1.05;
+  }
+
+  .role {
+    margin-top: 18px;
+    font-size: 20px;
+    color: var(--ink-soft);
+    max-width: 46ch;
+  }
+
+  .header-links {
+    margin-top: 32px;
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+  }
+
+  .header-links a {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .header-links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* ---------- Sections ---------- */
+
+  section { padding: 64px 0; border-bottom: 1px solid var(--rule); }
+  section:last-of-type { border-bottom: none; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  h2.section-title { font-size: 26px; }
+
+  .section-index {
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+
+  p.lede {
+    max-width: 62ch;
+    color: var(--ink-soft);
+    font-size: 17px;
+  }
+
+  /* ---------- Skills ---------- */
+
+  .skill-groups {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 40px;
+  }
+
+  .skill-group h3 {
+    font-size: 15px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .skill-group ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: var(--ink-soft);
+  }
+
+  .skill-group li {
+    padding: 5px 0;
+    border-top: 1px solid var(--rule);
+    font-size: 15px;
+  }
+
+  .skill-group li:first-child { border-top: none; }
+
+  /* ---------- Projects ---------- */
+
+  .project {
+    padding: 28px 0;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 24px;
+  }
+
+  .project:first-child { border-top: none; padding-top: 0; }
+
+  .project-year {
+    color: var(--ink-soft);
+    font-size: 14px;
+    padding-top: 3px;
+  }
+
+  .project-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .project-desc {
+    color: var(--ink-soft);
+    font-size: 16px;
+    max-width: 54ch;
+  }
+
+  .project-tags {
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .project-tags span {
+    font-size: 13px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 3px 10px;
+    border-radius: 3px;
+  }
+
+  .project-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 1px;
+  }
+
+  .project-link:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ---------- About ---------- */
+
+  .about-body {
+    max-width: 62ch;
+    color: var(--ink-soft);
+    font-size: 17px;
+  }
+
+  .about-body p + p { margin-top: 16px; }
+
+  /* ---------- Contact ---------- */
+
+  .contact-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .icon-pill {
+    display: inline-flex;
+    align-items: center;
+    height: 52px;
+    padding: 0 15px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--paper-alt);
+    overflow: hidden;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .icon-pill:hover,
+  .icon-pill:focus-visible {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  .icon-pill .icon {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-pill .icon svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--ink);
+    transition: fill 0.2s ease;
+  }
+
+  .icon-pill:hover .icon svg,
+  .icon-pill:focus-visible .icon svg {
+    fill: var(--accent);
+  }
+
+  .icon-pill .label {
+    max-width: 0;
+    margin-left: 0;
+    opacity: 0;
+    white-space: nowrap;
+    font-size: 15px;
+    transition: max-width 0.3s ease, margin-left 0.3s ease, opacity 0.2s ease 0.05s;
+  }
+
+  .icon-pill:hover .label,
+  .icon-pill:focus-visible .label {
+    max-width: 260px;
+    margin-left: 10px;
+    opacity: 1;
+  }
+
+  footer {
+    padding: 40px 0 60px;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- About / list-style entries ---------- */
+
+  .about-group { margin-bottom: 34px; }
+  .about-group:last-child { margin-bottom: 0; }
+
+  .about-group-label {
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+
+  .badge {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    flex: 0 0 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: #14161a;
+    background: var(--accent);
+  }
+
+  .entry {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .about-group .entry:first-of-type,
+  .exp-list .entry:first-of-type,
+  .cert-list .entry:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .entry-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 16px;
+  }
+
+  .entry-role {
+    font-weight: 600;
+  }
+
+  .entry-org {
+    text-decoration: none;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+  }
+
+  .entry-org:hover { color: var(--accent); border-color: var(--accent); }
+
+  .entry-meta {
+    margin-left: auto;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  .entry-desc {
+    color: var(--ink-soft);
+    font-size: 15px;
+    max-width: 58ch;
+  }
+
+  .sub-list {
+    list-style: none;
+    margin: 4px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sub-list li {
+    color: var(--ink-soft);
+    font-size: 15px;
+    padding-left: 2px;
+  }
+
+  .sub-list li .arrow {
+    color: var(--accent);
+    margin-right: 6px;
+  }
+
+  .sub-list a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .sub-list a:hover { color: var(--accent); border-color: var(--accent); }
+
+  .cert-list .entry-head { justify-content: space-between; }
+
+  .cert-link {
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 1px;
+    white-space: nowrap;
+  }
+
+  .cert-link:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ---------- Signature ---------- */
+
+  .signature-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .signature-reveal {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  #signature.in-view .signature-reveal {
+    clip-path: inset(0 0 0 0);
+  }
+
+  .signature-svg {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    display: block;
+  }
+
+  .signature-svg text {
+    font-family: 'Mrs Saint Delafield', cursive;
+    font-size: 58px;
+    fill: var(--accent);
+  }
+
+  .signature-caption {
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 480px) {
+    .entry-meta { margin-left: 0; }
+    .cert-list .entry-head { flex-direction: column; align-items: flex-start; gap: 4px; }
+  }
+
+
+    header.site { padding: 64px 0 48px; }
+    .skill-groups { grid-template-columns: 1fr; }
+    .project { grid-template-columns: 1fr; gap: 6px; }
+    .project-year { order: 2; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="kicker">AI &amp; Machine Learning Student</div>
+    <h1 class="name">Udaykumar Mor</h1>
+    <nav class="header-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">About</h2>
+    </div>
+
+    <div class="about-group">
+      <div class="about-group-label">currently</div>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-role">Placeholder Role</span>
+          <span class="badge">C</span>
+          <a class="entry-org" href="#" target="_blank" rel="noopener">Placeholder Company</a>
+        </div>
+        <p class="entry-desc">One line on what this role involves — e.g. "building and evaluating small ML models as part of a university project team."</p>
+      </div>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-role">Placeholder Degree, AI/ML</span>
+          <span class="badge">U</span>
+          <a class="entry-org" href="#" target="_blank" rel="noopener">Placeholder University</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-group">
+      <div class="about-group-label">what i've been up to</div>
+      <ul class="sub-list">
+        <li><span class="arrow">↳</span>exploring <a href="#" target="_blank" rel="noopener">applied machine learning projects</a> outside coursework</li>
+        <li><span class="arrow">↳</span>getting hands-on with <a href="#" target="_blank" rel="noopener">cloud &amp; deployment tools</a> for ML models</li>
+        <li><span class="arrow">↳</span>reading and experimenting with <a href="#" target="_blank" rel="noopener">LLMs and fine-tuning</a> on small datasets</li>
+      </ul>
+    </div>
+
+    <div class="about-group">
+      <div class="about-group-label">more about me</div>
+      <ul class="sub-list">
+        <li><span class="arrow">↳</span>placeholder — a personal detail that makes you memorable</li>
+        <li><span class="arrow">↳</span>placeholder — a link to something you enjoy, e.g. a <a href="#" target="_blank" rel="noopener">reading list</a> or side hobby</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">Experience</h2>
+    </div>
+    <div class="exp-list">
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-role">Placeholder Role</span>
+          <span class="badge">A</span>
+          <a class="entry-org" href="#" target="_blank" rel="noopener">Company A</a>
+          <span class="entry-meta">Jun 2025 – Aug 2025</span>
+        </div>
+        <p class="entry-desc">One sentence on what you did and the outcome — e.g. "built a data pipeline that cut manual reporting time by half."</p>
+      </div>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-role">Placeholder Role</span>
+          <span class="badge">B</span>
+          <a class="entry-org" href="#" target="_blank" rel="noopener">Company B</a>
+          <span class="entry-meta">Jan 2024 – May 2024</span>
+        </div>
+        <p class="entry-desc">One sentence describing this role's responsibilities and a concrete result.</p>
+      </div>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-role">Placeholder Society Role</span>
+          <span class="badge">S</span>
+          <a class="entry-org" href="#" target="_blank" rel="noopener">Student Society / Club</a>
+          <span class="entry-meta">2023 – present</span>
+        </div>
+        <p class="entry-desc">One line on involvement, e.g. leading workshops, organising events, or mentoring peers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">Certifications</h2>
+    </div>
+    <div class="cert-list">
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-role">Placeholder Certification Name</span>
+          <span class="badge">G</span>
+          <a class="entry-org" href="#" target="_blank" rel="noopener">Issuer, Year</a>
+          <a class="cert-link" href="#" target="_blank" rel="noopener">View credential →</a>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-role">Placeholder Certification Name</span>
+          <span class="badge">A</span>
+          <a class="entry-org" href="#" target="_blank" rel="noopener">Issuer, Year</a>
+          <a class="cert-link" href="#" target="_blank" rel="noopener">View credential →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">Skills</h2>
+    </div>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h3>Languages &amp; Tools</h3>
+        <ul>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Git &amp; GitHub</li>
+          <li>Placeholder tool</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>ML &amp; Data</h3>
+        <ul>
+          <li>PyTorch / TensorFlow</li>
+          <li>scikit-learn</li>
+          <li>Pandas &amp; NumPy</li>
+          <li>Placeholder framework</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">Projects</h2>
+    </div>
+
+    <div class="project">
+      <div class="project-year">2026</div>
+      <div>
+        <h3 class="project-title">Placeholder Project One</h3>
+        <p class="project-desc">One or two sentences on the problem, what you built, and the result — e.g. "A sentiment classifier trained on X, achieving Y% accuracy."</p>
+        <div class="project-tags">
+          <span>Python</span>
+          <span>PyTorch</span>
+        </div>
+        <a class="project-link" href="#">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-year">2025</div>
+      <div>
+        <h3 class="project-title">Placeholder Project Two</h3>
+        <p class="project-desc">Short description of the second project — what it does, why you built it, and any interesting technical detail.</p>
+        <div class="project-tags">
+          <span>scikit-learn</span>
+          <span>Pandas</span>
+        </div>
+        <a class="project-link" href="#">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-year">2025</div>
+      <div>
+        <h3 class="project-title">Placeholder Project Three</h3>
+        <p class="project-desc">Short description of a third project, coursework piece, or hackathon build worth showing off.</p>
+        <div class="project-tags">
+          <span>SQL</span>
+          <span>Data analysis</span>
+        </div>
+        <a class="project-link" href="#">View on GitHub →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="signature">
+  <div class="wrap">
+    <div class="signature-wrap">
+      <div class="signature-reveal">
+        <svg class="signature-svg" viewBox="0 0 380 90" xmlns="http://www.w3.org/2000/svg">
+          <text x="4" y="62">Udaykumar Mor.</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-icons" style="margin-top: 24px;">
+      <a class="icon-pill" href="mailto:you@example.com" aria-label="Email you@example.com">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 5.7a.8.8 0 0 0 1 0L19.8 6H4.2ZM20 7.9l-6.9 5.4a2.8 2.8 0 0 1-3.4 0L3 7.9V18h17V7.9Z"/></svg>
+        </span>
+        <span class="label">you@example.com</span>
+      </a>
+      <a class="icon-pill" href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn: linkedin.com/in/yourprofile">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM3 9h4v12H3V9Zm6.5 0H14v1.6h.06c.55-1 1.9-2.1 3.9-2.1 4.2 0 5 2.7 5 6.3V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21h-4V9Z"/></svg>
+        </span>
+        <span class="label">linkedin.com/in/yourprofile</span>
+      </a>
+      <a class="icon-pill" href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub: github.com/yourusername">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-1.03-.01-1.87-2.78.61-3.37-1.2-3.37-1.2-.45-1.18-1.11-1.49-1.11-1.49-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.55 2.34 1.1 2.91.84.09-.66.35-1.1.63-1.35-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.32 2.74-1.05 2.74-1.05.56 1.42.21 2.47.1 2.73.65.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.2 10.2 0 0 0 22 12.19C22 6.58 17.52 2 12 2Z"/></svg>
+        </span>
+        <span class="label">github.com/yourusername</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    &copy; Udaykumar Mor.
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var section = document.getElementById('signature');
+    if (!section) return;
+
+    if (!('IntersectionObserver' in window)) {
+      section.classList.add('in-view');
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          section.classList.add('in-view');
+          observer.unobserve(section);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(section);
+  })();
+</script>
+
+</body>
+</html>
